@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Passport Application Portal - Home</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f7fa;
+            color: #333;
+        }
+
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 20px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            padding: 60px 40px;
+            text-align: center;
+            background-color: #e6eef7;
+        }
+
+        .hero h2 {
+            font-size: 32px;
+            color: #003366;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-top: 15px;
+        }
+
+        .buttons {
+            margin-top: 30px;
+        }
+
+        .buttons a {
+            background-color: #003366;
+            color: white;
+            padding: 12px 25px;
+            margin: 10px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        .buttons a:hover {
+            background-color: #0055a5;
+        }
+
+        footer {
+            background-color: #003366;
+            color: white;
+            padding: 15px 40px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        @media (max-width: 600px) {
+            header, .hero, footer {
+                padding: 20px;
+            }
+
+            .hero h2 {
+                font-size: 24px;
+            }
+
+            .buttons a {
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Passport Seva Kendra</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/apply">Apply</a>
+            <a href="/status">Status</a>
+            <a href="/contact">Contact</a>
+            <a href="/about">About</a>
+            <a href="/register" style="color: #ffc107; font-weight: bold;">Register</a> <!-- 🔥 Highlighted Link -->
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h2>Welcome to the Official Passport Application Portal</h2>
+        <p>Apply for a new passport, renew an existing one, or track your application status online.</p>
+        <div class="buttons">
+            <a href="/apply">Apply Now</a>
+            <a href="/status">Check Status</a>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 Passport Seva | Ministry of External Affairs, Government of India
+    </footer>
+
+</body>
+</html>

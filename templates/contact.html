@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us - Passport Office</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        .top-bar {
+            background-color: #003366;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 1.2rem;
+        }
+
+        .contact-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            max-width: 1000px;
+            margin: 40px auto;
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            gap: 40px;
+        }
+
+        .contact-info, .contact-form {
+            flex: 1;
+        }
+
+        .contact-info h2, .contact-form h2 {
+            margin-bottom: 10px;
+            color: #003366;
+        }
+
+        .contact-info p {
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .contact-info strong {
+            color: #111;
+        }
+
+        .contact-form form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 1rem;
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+        }
+
+        .contact-form button {
+            background-color: #003366;
+            color: white;
+            padding: 12px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .contact-form button:hover {
+            background-color: #001f4d;
+        }
+
+        .success-message {
+            color: green;
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f1f1f1;
+            font-size: 0.9rem;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar">
+        Passport Office - Contact Page
+    </div>
+
+    <div class="contact-container">
+        <!-- Left Section -->
+        <div class="contact-info">
+            <h2>Get in Touch</h2>
+            <p>If you have any questions about your passport application, feel free to contact us.
+                We're here to assist you Monday to Friday, from 9 AM to 6 PM.</p>
+
+            <p><strong>Address:</strong><br>
+            Passport Seva Kendra,<br>
+            Ministry of External Affairs,<br>
+            New Delhi, India</p>
+
+            <p><strong>Email:</strong> support@passportindia.gov.in</p>
+            <p><strong>Phone:</strong> +91-1800-258-1800</p>
+            <p><img src="https://www.passportindia.gov.in/AppOnlineProject/images/passport_seva_logo.png" alt="Passport Office" width="120"></p>
+        </div>
+
+        <!-- Right Section -->
+        <div class="contact-form">
+            <h2>Send Us a Message</h2>
+            <form method="POST" action="/contact">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+
+            {% if success %}
+            <p class="success-message">Thank you! Your message has been sent successfully.</p>
+            {% endif %}
+        </div>
+    </div>
+
+    <footer>
+        © 2025 Passport Authority of India. All rights reserved.
+    </footer>
+
+</body>
+</html>

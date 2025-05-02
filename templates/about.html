@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Us</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #003366;
+            margin-bottom: 10px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .image-gallery {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .image-gallery img {
+            width: 280px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease;
+        }
+
+        .image-gallery img:hover {
+            transform: scale(1.06);
+        }
+
+        @media screen and (max-width: 768px) {
+            .image-gallery {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .image-gallery img {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>About Us</header>
+
+    <div class="container">
+
+        <div class="section">
+            <h2>Our Vision</h2>
+            <p>To empower every Indian citizen with hassle-free access to international travel through a modern, secure, and efficient passport issuance system.</p>
+        </div>
+
+        <div class="section">
+            <h2>Mission Statement</h2>
+            <ul>
+                <li>Streamline the passport issuance process through digitization</li>
+                <li>Ensure accessibility through widespread Passport Seva Kendras (PSKs)</li>
+                <li>Maintain high standards of security and verification</li>
+                <li>Provide responsive support for all passport-related needs</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Nationwide Coverage</h2>
+            <p>Over 500+ Passport Seva Kendras (PSKs) and Post Office PSKs (POPSKs) are operational across the country to ensure every citizen has access to services.</p>
+        </div>
+
+        <div class="section">
+            <h2>Meet Our Team</h2>
+            <p>Behind the digital portal is a team of dedicated officials, engineers, and administrators working together to serve the nation with pride.</p>
+        </div>
+
+        <div class="image-gallery">
+            <img src="{{ url_for('static', filename='images/download.jpg') }}" alt="Team Image 1">
+            <img src="{{ url_for('static', filename='images/download (1).jpg') }}" alt="Team Image 2">
+        </div>
+
+    </div>
+
+</body>
+</html>
